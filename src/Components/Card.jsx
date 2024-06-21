@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { appContext } from "../Context/Context";
+import "./css/Card.css";
 
-
-const Card = ({ name, username, id }) => {
-
-  const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
-  }
+const Card = ({ dentist }) => {
+  const { dispatch } = useContext(appContext);
 
   return (
     <div className="card">
-        {/* En cada card deberan mostrar en name - username y el id */}
+      <Link to={"/dentist/" + dentist.id}>
+        <div className="circle">
+          <h2>{dentist.id}</h2>
+        </div>
+        <div className="content">
+          <div>
+            <b>Nombre: </b>
+            {dentist.name}
+          </div>
+          <div>
+            <b>Usuario:</b> {dentist.username}
+          </div>
+        </div>
+      </Link>
 
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">Add fav</button>
+      <button
+        onClick={() => dispatch({ type: "add-favorite", dentist })}
+        className="favButton"
+      >
+        <b>Add fav</b>
+      </button>
     </div>
   );
 };

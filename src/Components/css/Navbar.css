@@ -1,0 +1,41 @@
+.item {
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+.item.selected {
+  background-color: #76abae;
+}
+
+nav button {
+  cursor: pointer;
+}
+nav button:hover {
+  cursor: pointer;
+  background: #76abae;
+  color: #fff;
+  border: 1px solid #76abae;
+}
+.dark-nav {
+  background-color: #222831;
+}
+.dark-nav a {
+  background-color: #31363f;
+}
+.dark-nav button {
+  border: 1px solid #fff;
+  background: none;
+}
+
+.light-nav {
+  background-color: #fff;
+}
+.light-nav a {
+  background-color: #b2d0d1;
+}
+.light-nav button {
+  border: 1px solid #76abae;
+  color: #76abae;
+  background: none;
+}

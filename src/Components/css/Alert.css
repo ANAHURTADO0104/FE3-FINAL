@@ -1,0 +1,34 @@
+.alert-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #ffffffe3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.alert {
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  background: #ffff;
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+}
+
+.alert H2 {
+  color: #76abae;
+}
+
+.dark-alert-container {
+  background: #31363fe3;
+}
+
+.dark-alert-container .alert {
+  background: #222831;
+  color: #ffff;
+}
